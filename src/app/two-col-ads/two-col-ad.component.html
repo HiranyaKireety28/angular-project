@@ -1,0 +1,17 @@
+<div class="ad-container">
+  <p class="ad-container-title">{{title}}</p>
+  <div class="ads">
+    <div class="ad" *ngFor="let ad of ads">
+      <div class="ad-image-container">
+        <img [src]="ad?.imageSource"/>
+      </div>
+      <p class="ad-title">{{ad?.title}}</p>
+    </div>
+  </div>
+  <div class="redirection-container" *ngIf="linkName">
+    <a [href]="linkURL" class="redirection-link">{{linkName}}</a>
+  </div>
+  <div class="button-container" *ngIf="buttonName">
+    <a [href]="buttonURL" class="button-link">{{buttonName}}</a>
+  </div>
+</div>

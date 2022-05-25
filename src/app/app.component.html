@@ -1,0 +1,46 @@
+<app-header></app-header>
+<app-navbar></app-navbar>
+<div class="content">
+  <div class="content-container">
+    <app-two-col-ad
+      *ngFor="let adContainer of adsContainers"
+      [ads]="adContainer.ads"
+      [title]="adContainer.title"
+      [linkName]="adContainer.linkName"
+      [linkURL]="adContainer.linkURL"
+      [buttonName]="adContainer.buttonName"
+      [buttonURL]="adContainer.buttonURL"
+    ></app-two-col-ad>
+  </div>
+  <div>
+    <app-carousel
+      *ngFor="let carousel of carousels"
+      [title]="carousel.title"
+      [linkName]="carousel.linkName"
+      [linkURL]="carousel.linkURL"
+      [items]="carousel.items"
+      (carouselItemClicked)="showDetails($event)"
+    ></app-carousel>
+  </div>
+  <div class="details-container">
+    <mat-card>
+      <app-details [item]="clickedItem"></app-details>
+    </mat-card>
+  </div>
+
+  <!-- <div>
+    <app-shipping-details></app-shipping-details>
+  </div> -->
+  <div class="product-container">
+    <div class="product-list-container">
+      <app-product
+        *ngFor="let product of products"
+        [product]="product"
+        (productClicked)="showProductDetails($event)"
+      ></app-product>
+    </div>
+    <div class="product-details-container">
+      <app-product-details [product]="selectedProduct"></app-product-details>
+    </div>
+  </div>
+</div>
