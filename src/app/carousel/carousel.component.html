@@ -1,0 +1,18 @@
+
+<div *ngIf="items?.length !== 0">
+  <mat-card class="carousel-container">
+    <p-carousel [value]="items" [numVisible]="5" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
+      <ng-template pTemplate="header">
+        <div class="carousel-header">
+          <span class="carousel-title">{{title}}</span>
+          <a [href]="linkURL" class="carousel-link">{{linkName}}</a>
+        </div>
+      </ng-template>
+      <ng-template let-item pTemplate="item">
+          <div class="item" (click)="navigateToDetails(item)">
+            <img class="item-image" [src]="item.imageSource"/>
+          </div>
+      </ng-template>
+    </p-carousel>
+  </mat-card>
+</div>

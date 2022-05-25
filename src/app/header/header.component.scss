@@ -1,0 +1,27 @@
+.header {
+  padding: 15px;
+  background-color: #131921;
+}
+
+.logo-container {
+  display: inline-block;
+  width: 6%;
+  vertical-align: top;
+  background-image: url('https://images-eu.ssl-images-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png');
+  background-position: -10px -51px;
+  height: 35px;
+  margin-left: 15px;
+}
+
+.title-container {
+  display: inline-block;
+  width: 93%;
+  text-align: center;
+  vertical-align: top;
+  color: #FFFFFF;
+}
+
+.title-container h2 {
+  padding: 0px;
+  margin: 0px;
+}

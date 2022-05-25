@@ -1,0 +1,27 @@
+<mat-card class="product-box green">
+  <div class="product-container" (click)="showProductDetails()">
+    <div class="product-image-container">
+      <img [src]="product.imageSource" class="product-image" />
+    </div>
+    <div class="product-description-container">
+      <p class="product-title">{{ product.title }}</p>
+      <p class="review-count">{{ product.reviewCount }}</p>
+      <p *ngIf="product.isLimitedDeal" class="limited-time-deal">
+        Limited Time Deal
+      </p>
+      <p>
+        <span class="currency">{{ product.currency }}</span
+        ><span class="selling-price">{{ product.sellingPrice }}</span
+        ><span class="cost-price">{{ product.costPrice }}</span>
+        <span class="discount">{{product.discount}}%</span>
+      </p>
+      <p *ngFor="let discountText of product.discountTexts" class="discount-text">
+        {{discountText}}
+      </p>
+      <p class="delivery-text">{{product.deliveryText}}<span class="delivery-date">{{product.deliveryDate}}</span></p>
+      <p *ngFor="let deliveryText of product.additionalDeliveryTexts">
+        {{deliveryText}}
+      </p>
+    </div>
+  </div>
+</mat-card>
