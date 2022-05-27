@@ -281,4 +281,8 @@ export class AppComponent {
   showProductDetails(product: Product): void{
     this.selectedProduct = product;
   }
+
+  trackByProduct(index: number, product: Product) {
+    return product.id;
+  }
 }

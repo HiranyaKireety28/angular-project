@@ -7,7 +7,9 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 })
 export class ShippingDetailsComponent implements OnInit, AfterViewInit {
 
+  firstname: string = 'Placeholder';
   @ViewChild('firstName') firstName?: ElementRef;
+  @ViewChild('lastName') lastName?: ElementRef;
   constructor() { }
 
   ngOnInit(): void {
@@ -15,5 +17,12 @@ export class ShippingDetailsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(){
     console.log(this.firstName?.nativeElement?.value);
+    console.log(this.lastName?.nativeElement?.value);
+  }
+
+  save(element: any) {
+    console.log("save", element);
+    console.log("firstName", this.firstName?.nativeElement.value);
+    console.log("lastName", this.lastName?.nativeElement.value);
   }
 }

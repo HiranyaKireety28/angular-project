@@ -5,8 +5,8 @@
     </div>
     <div class="product-description-container">
       <p class="product-title">{{ product.title }}</p>
-      <p class="review-count">{{ product.reviewCount }}</p>
-      <p *ngIf="product.isLimitedDeal" class="limited-time-deal">
+      <p class="review-count" [ngClass]="{'orange green': product.reviewCount > 10000 && product.reviewCount < 200000}">{{ product.reviewCount }}</p>
+      <p *ngIf="product.isLimitedDeal" class="limited-time-deal" [ngStyle]="{'color': product.isLimitedDeal ? 'white': 'black'}">
         Limited Time Deal
       </p>
       <p>
@@ -25,3 +25,11 @@
     </div>
   </div>
 </mat-card>
+
+<div>
+  <p appBlockCopyPaste>Account Number: 1234456</p>
+</div>
+
+<div>
+  <p appElementStyler>Element Styler</p>
+</div>

@@ -1,6 +1,12 @@
 <h4>Shipping Details</h4>
-<div>FirstName: <input type="text" name="firstName" #firstName value="First Name"/></div>
-<div>FirstName: <input type="text" name="lastName"/></div>
+<div>FirstName: <input type="text" name="firstName" #firstName value="First Name" [(ngModel)]="firstname"/></div>
+<div>LastName: <input type="text" name="lastName" #lastName/></div>
 <div>Addres: <textarea name="address"></textarea></div>
+<button (click)="save(firstName)">Save</button>
+<div [ngSwitch]="firstName">
+  <p *ngSwitchCase="'Hiranya'">Hiranya</p>
+  <p *ngSwitchCase="'Kireety'">Kireety</p>
+  <p *ngSwitchDefault>Default</p>
+</div>
 
 

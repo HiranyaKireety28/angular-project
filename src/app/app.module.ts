@@ -17,6 +17,9 @@ import { ShippingDetailsComponent } from './shipping-details/shipping-details.co
 import { ProductComponent } from './product/product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { DayDatePipe } from './day-date.pipe';
+import { FormsModule } from '@angular/forms';
+import { BlockCopyPasteDirective } from './block-copy-paste/block-copy-paste.directive';
+import { ElementStylerDirective } from './element-styler/element-styler.directive';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,8 @@ import { DayDatePipe } from './day-date.pipe';
     ProductComponent,
     ProductDetailsComponent,
     DayDatePipe,
+    BlockCopyPasteDirective,
+    ElementStylerDirective,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,7 @@ import { DayDatePipe } from './day-date.pipe';
     BrowserAnimationsModule,
     CarouselModule,
     MatCardModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
