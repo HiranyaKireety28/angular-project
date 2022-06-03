@@ -1,6 +1,5 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,10 +16,14 @@ import { ShippingDetailsComponent } from './shipping-details/shipping-details.co
 import { ProductComponent } from './product/product.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { DayDatePipe } from './day-date.pipe';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlockCopyPasteDirective } from './block-copy-paste/block-copy-paste.directive';
 import { ElementStylerDirective } from './element-styler/element-styler.directive';
-
+import { AddProductComponent } from './add-product/add-product.component';
+import { AddAdContainerComponent } from './add-ad-container/add-ad-container.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +40,8 @@ import { ElementStylerDirective } from './element-styler/element-styler.directiv
     DayDatePipe,
     BlockCopyPasteDirective,
     ElementStylerDirective,
+    AddProductComponent,
+    AddAdContainerComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,8 +50,13 @@ import { ElementStylerDirective } from './element-styler/element-styler.directiv
     CarouselModule,
     MatCardModule,
     FormsModule,
+    ReactiveFormsModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

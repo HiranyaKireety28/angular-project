@@ -16,7 +16,6 @@ export class ProductComponent implements OnInit {
   }
 
   public showProductDetails(): void{
-    console.log(this.product);
     this.productClicked.emit(this.product);
   }
 }

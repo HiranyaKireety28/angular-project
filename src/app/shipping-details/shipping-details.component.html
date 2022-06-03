@@ -2,6 +2,7 @@
 <div>FirstName: <input type="text" name="firstName" #firstName value="First Name" [(ngModel)]="firstname"/></div>
 <div>LastName: <input type="text" name="lastName" #lastName/></div>
 <div>Addres: <textarea name="address"></textarea></div>
+{{firstname}}
 <button (click)="save(firstName)">Save</button>
 <div [ngSwitch]="firstName">
   <p *ngSwitchCase="'Hiranya'">Hiranya</p>

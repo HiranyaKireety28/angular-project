@@ -85,7 +85,7 @@ export class AppComponent {
 
   products: Product[] = [
     {
-      id: '1',
+      id: 1,
       imageSource: 'assets/m12.jpg',
       title: 'Samsung Galaxy M12 (Blue,4GB RAM, 64GB Storage) 6000 mAh with 8nm Processor | True 48 MP Quad Camera | 90Hz Refresh Rate',
       rating: 4.5,
@@ -101,7 +101,7 @@ export class AppComponent {
       additionalDeliveryTexts: ['FREE Delivery by Amazon'],
     },
     {
-      id: '2',
+      id: 2,
       imageSource: 'assets/m32.jpg',
       title: 'Samsung Galaxy M32 (Light Blue, 4GB RAM, 64GB Storage) 6 Months Free Screen Replacement for Prime',
       rating: 4.2,
@@ -117,7 +117,7 @@ export class AppComponent {
       additionalDeliveryTexts: ['FREE Delivery by Amazon'],
     },
     {
-      id: '3',
+      id: 3,
       imageSource: 'assets/redmi9.jpg',
       title: 'Redmi 9 Activ (Coral Green, 4GB RAM, 64GB Storage)',
       rating: 4.3,
@@ -155,119 +155,145 @@ export class AppComponent {
 
   adsContainers: AdContainer[] = [
     {
+      id: 123,
       title: 'Upgrade your home | Amazon Brands & more',
       linkName: 'Shop now',
       linkURL:'https://www.amazon.in/gp/sva/dashboard',
       ads: [
         {
+          id: 1,
           imageSource: 'assets/tv.jpg',
           title: 'Smart LED TVs'
         },
         {
+          id: 2,
           imageSource: 'assets/appliances.jpg',
           title: 'Appliances'
         },
         {
+          id: 3,
           imageSource: 'assets/furniture.jpg',
           title: 'Furniture'
         },
         {
+          id: 4,
           imageSource: 'assets/kitchen-products.jpg',
           title: 'Kitchen products'
         }
       ]
     },
     {
+      id: 235,
       title: 'Keep Shopping for',
       ads: [
         {
+          id: 5,
           imageSource: 'assets/godrej-soap-pink.jpg',
           title: 'Godrej No. 1 Bathing Soap Kesar & Milk Cream – Grade 1 Soap & Long-lasting Fragrance'
         },
         {
+          id: 6,
           imageSource: 'assets/godrej-soap.jpg',
           title: 'Godrej No.1 Lime & Aloe Vera (150g)'
         },
         {
+          id: 7,
           imageSource: 'assets/boroplus-antiseptic.jpg',
           title: 'BoroPlus Antiseptic and Moisturising Bathing Soap with Aloe Vera, Neem and Tulsi'
         },
         {
+          id: 8,
           imageSource: 'assets/vivel-soap.jpg',
           title: 'Vivel Aloe Vera Bathing Soap with Vitamin E for Soft, Glowing skin'
         }
       ],
     },
     {
+      id: 3,
       title: 'Amazon Pay | Pay utility bills fast & conveniently',
       linkName: 'Explore more from Amazon Pay',
       linkURL:'https://www.amazon.in/gp/sva/dashboard',
       ads: [
         {
+          id: 9,
           imageSource: 'assets/electricity-bill.jpg',
           title: 'Electricity bill'
         },
         {
+          id: 10,
           imageSource: 'assets/lpg-gas-cylinder.jpg',
           title: 'LPG gas cylinder'
         },
         {
+          id: 11,
           imageSource: 'assets/broadband-bill.jpg',
           title: 'Broadband bill'
         },
         {
+          id: 12,
           imageSource: 'assets/dth-recharge.jpg',
           title: 'DTH Recharge'
         }
       ]
     },
     {
+      id: 4,
       title: 'Automotive essentials | Up to 60% off',
       linkName: 'See more',
       linkURL:'https://www.amazon.in/gp/sva/dashboard',
       ads: [
         {
+          id: 13,
           imageSource: 'assets/cleaning-accessories.jpg',
           title: 'Cleaning accessories'
         },
         {
+          id: 14,
           imageSource: 'assets/tyre.jpg',
           title: 'Tyre & rim care'
         },
         {
+          id: 15,
           imageSource: 'assets/helmets.jpg',
           title: 'Helmets'
         },
         {
+          id: 16,
           imageSource: 'assets/vacuum-cleaner.jpg',
           title: 'Vacuum cleaner'
         }
       ]
     },
     {
+      id: 5,
       title: 'Shop by Category',
       linkName: 'See more',
       linkURL:'https://www.amazon.in/gp/sva/dashboard',
       ads: [
         {
+          id: 17,
           imageSource: 'assets/fresh.jpg',
           title: 'Fresh'
         },
         {
+          id: 18,
           imageSource: 'assets/mobiles.jpg',
           title: 'Mobiles'
         },
         {
+          id: 19,
           imageSource: 'assets/fashion.jpg',
           title: 'Fashion'
         },
         {
+          id: 20,
           imageSource: 'assets/electronics.jpg',
           title: 'Electronics'
         }
       ]
     },
     {
+      id: 6,
       title: 'Sign in for your best experience',
       buttonName: 'Sign in securely',
       buttonURL:'https://www.amazon.in/ap/signin',
