@@ -5,8 +5,8 @@
         Add Ad Container
       </button>
       <div formArrayName="adsContainers">
-        <div *ngFor="let adContainer of adsContainers; let i = index">
-          <div formGroupName="{{i}}">
+        <div *ngFor="let adContainer of adsContainers.controls; let i = index">
+          <div [formGroupName]="i">
             <div>
               <mat-form-field appearance="fill">
                 <input
@@ -72,8 +72,8 @@
                 Add Ad
               </button>
               <div formArrayName="ads">
-                <div *ngFor="let ad of ads(i); let j = index">
-                  <div formGroupName="{{ j }}">
+                <div *ngFor="let ad of ads(i).controls; let j = index">
+                  <div [formGroupName]="j">
                     <mat-form-field appearance="fill">
                       <input
                         matInput

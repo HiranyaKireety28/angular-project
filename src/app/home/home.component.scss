@@ -1,0 +1,25 @@
+.content-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-content: space-between;
+}
+
+.product-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.product-list-container {
+  flex: 0 0 45%;
+}
+
+.product-details-container {
+  flex: 0 0 55%;
+}
+
+.shipping-details-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

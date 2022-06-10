@@ -16,8 +16,6 @@ export class ShippingDetailsComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(){
-    console.log(this.firstName?.nativeElement?.value);
-    console.log(this.lastName?.nativeElement?.value);
   }
 
   save(element: any) {

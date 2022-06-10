@@ -1,5 +1,5 @@
 <div class="nav-bar">
   <div class="nav-link" *ngFor="let navLink of navLinks">
-    <span>{{navLink}}</span>
+    <a [href]="navLink.linkURL" [routerLink]="navLink.linkURL" routerLinkActive="selected-link"><span>{{navLink.linkName}}</span></a>
   </div>
 </div>

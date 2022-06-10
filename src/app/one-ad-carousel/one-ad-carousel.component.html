@@ -1,1 +1,9 @@
-<p>one-ad-carousel works!</p>
+<div>
+  <app-carousel
+    *ngFor="let carousel of carousels"
+    [title]="carousel.title"
+    [linkName]="carousel.linkName"
+    [linkURL]="carousel.linkURL"
+    [items]="carousel.items"
+  ></app-carousel>
+</div>

@@ -31,16 +31,15 @@ export class AddAdContainerComponent implements OnInit {
   }
 
   get adsContainers() {
-    return (this.addAdContainerFormGroup.get('adsContainers') as FormArray).controls;
+    return this.addAdContainerFormGroup.get('adsContainers') as FormArray;
   }
 
   public ads(index: number){
-    return ((this.addAdContainerFormGroup.get('adsContainers') as FormArray).at(index).get('ads') as FormArray).controls;
+    return this.adsContainers.at(index).get('ads') as FormArray;
   }
 
   public addAd(index: number): void {
-    const ads = ((this.addAdContainerFormGroup.get('adsContainers') as FormArray).at(index).get('ads') as FormArray);
-    ads.push(this.fb.group({
+    this.ads(index).push(this.fb.group({
       adTitle: new FormControl('',Validators.required),
       imageSource: new FormControl(),
     }));

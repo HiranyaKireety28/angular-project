@@ -24,6 +24,15 @@ import { AddAdContainerComponent } from './add-ad-container/add-ad-container.com
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import { BestsellersComponent } from './bestsellers/bestsellers.component';
+import { MobilesComponent } from './mobiles/mobiles.component';
+import { CustomerServiceComponent } from './customer-service/customer-service.component';
+import { HomeComponent } from './home/home.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +51,10 @@ import { MatInputModule } from '@angular/material/input';
     ElementStylerDirective,
     AddProductComponent,
     AddAdContainerComponent,
+    BestsellersComponent,
+    MobilesComponent,
+    CustomerServiceComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +67,10 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCheckboxModule,
+    MatIconModule,
   ],
   providers: [
   ],

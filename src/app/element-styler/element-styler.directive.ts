@@ -9,7 +9,6 @@ export class ElementStylerDirective {
 
   @HostListener('mouseenter') mouseover(event: Event){
     // this.element.nativeElement.style.backgroundColor = 'orange';
-    console.log("mouseenter");
     this.renderer.setStyle(this.element.nativeElement, 'backgroundColor', 'orange');
   }
 }

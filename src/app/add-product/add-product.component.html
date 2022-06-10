@@ -1,1 +1,109 @@
-<p>add-product works!</p>
+<mat-card>
+  <h2 class="form-title">Add Product</h2>
+  <div class="add-product-button-container">
+    <button
+      mat-raised-button
+      color="primary"
+      aria-label="Example icon button with a plus one icon"
+      (click)="addProduct()"
+    >
+      Add Product
+    </button>
+  </div>
+  <form [formGroup]="addProductFormGroup">
+    <div formArrayName="products">
+      <div *ngFor="let product of products.controls; let i = index">
+        <div [formGroupName]="i">
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product ID</mat-label>
+              <input matInput formControlName="id"/>
+            </mat-form-field>
+            <mat-error *ngIf="product.get('id')?.hasError('required') && product.get('id')?.touched">Please enter Product ID</mat-error>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product Image Path</mat-label>
+              <input matInput formControlName="imageSource"/>
+            </mat-form-field>
+            <mat-error *ngIf="product.get('imageSource')?.hasError('required') && product.get('imageSource')?.touched">Please enter Product Image Path</mat-error>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product Title</mat-label>
+              <input matInput formControlName="title" />
+            </mat-form-field>
+            <mat-error *ngIf="product.get('title')?.hasError('required') && product.get('title')?.touched">Please enter Product Title</mat-error>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product Rating</mat-label>
+              <input matInput formControlName="rating" />
+              <mat-error *ngIf="product.get('rating')?.hasError('required') && product.get('rating')?.touched">Please enter Product Rating</mat-error>
+              <mat-error *ngIf="product.get('rating')?.hasError('isNotNumeric') && product.get('rating')?.touched">Please enter only digits</mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product Review Count</mat-label>
+              <input matInput formControlName="reviewCount" />
+            </mat-form-field>
+            <mat-error *ngIf="product.get('reviewCount')?.hasError('required') && product.get('reviewCount')?.touched">Please enter Product Review Count</mat-error>
+            <mat-error *ngIf="product.get('reviewCount')?.hasError('isNotNumeric') && product.get('reviewCount')?.touched">Please enter only digits</mat-error>
+          </div>
+          <div>
+            <mat-checkbox formControlName="isLimitedDeal">
+              IsLimitedDeal
+            </mat-checkbox>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product Selling Price</mat-label>
+              <input matInput formControlName="sellingPrice" />
+            </mat-form-field>
+            <mat-error *ngIf="product.get('sellingPrice')?.hasError('required') && product.get('sellingPrice')?.touched">Please enter Product Selling Price</mat-error>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product Actual Price</mat-label>
+              <input matInput formControlName="costPrice" />
+            </mat-form-field>
+            <mat-error *ngIf="product.get('costPrice')?.hasError('required') && product.get('costPrice')?.touched">Please enter Product Actual Price</mat-error>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product Discount</mat-label>
+              <input matInput formControlName="discount" />
+            </mat-form-field>
+            <mat-error *ngIf="product.get('discount')?.hasError('required') && product.get('discount')?.touched">Please enter Product Discount</mat-error>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product Delivery text</mat-label>
+              <input matInput formControlName="deliveryText" />
+            </mat-form-field>
+            <mat-error *ngIf="product.get('deliveryText')?.hasError('required') && product.get('deliveryText')?.touched">Please enter Product Delivery Text</mat-error>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Choose a date</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="deliveryDate"/>
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle
+                matSuffix
+                [for]="picker"
+              ></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-error *ngIf="product.get('deliveryDate')?.hasError('required') && product.get('deliveryDate')?.touched">Please enter Product Delivery Date</mat-error>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="save-products-button-container">
+      <button mat-raised-button color="accent" (click)="saveProducts()" [disabled]="!addProductFormGroup?.valid">
+        Save
+      </button>
+    </div>
+  </form>
+</mat-card>
