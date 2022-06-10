@@ -1,0 +1,12 @@
+<div class="product-container">
+  <div class="product-list-container">
+    <app-product
+      *ngFor="let product of filteredProducts; trackBy: trackByProduct"
+      [product]="product"
+      (productClicked)="showProductDetails($event)"
+    ></app-product>
+  </div>
+  <div class="product-details-container">
+    <app-product-details [product]="selectedProduct"></app-product-details>
+  </div>
+</div>

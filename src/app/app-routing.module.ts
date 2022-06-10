@@ -5,6 +5,7 @@ import { CustomerServiceComponent } from './customer-service/customer-service.co
 import { HomeComponent } from './home/home.component';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { OneAdCarouselComponent } from './one-ad-carousel/one-ad-carousel.component';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
   {
@@ -27,7 +28,11 @@ const routes: Routes = [
   },
   {
     path: 'customer-service',
-    component: CustomerServiceComponent
+    component: CustomerServiceComponent,
+  },
+  {
+    path: 'products/:searchTerm',
+    component: ProductsComponent,
   }
 ];
 

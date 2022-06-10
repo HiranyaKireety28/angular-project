@@ -40,7 +40,8 @@ export class AddProductComponent implements OnInit {
           product.costPrice.toString(),
           product.discount.toString(),
           product.deliveryText,
-          product.deliveryDate
+          product.deliveryDate,
+          product.searchTerm,
         );
       }
     }
@@ -68,7 +69,8 @@ export class AddProductComponent implements OnInit {
     costPrice: string = '',
     discount: string = '',
     deliveryText: string = '',
-    deliveryDate: Date = new Date()
+    deliveryDate: Date = new Date(),
+    searchTerm: string = '',
   ): void {
     this.products.push(
       this.fb.group({
@@ -80,11 +82,12 @@ export class AddProductComponent implements OnInit {
         isLimitedDeal: new FormControl(
           isLimitedDeal,
         ),
-        sellingPrice: new FormControl(sellingPrice, Validators.required),
-        costPrice: new FormControl(costPrice, Validators.required),
-        discount: new FormControl(discount, Validators.required),
+        sellingPrice: new FormControl(sellingPrice, [Validators.required, numberValidator]),
+        costPrice: new FormControl(costPrice, [Validators.required, numberValidator]),
+        discount: new FormControl(discount, [Validators.required, numberValidator]),
         deliveryText: new FormControl(deliveryText, Validators.required),
         deliveryDate: new FormControl(deliveryDate, Validators.required),
+        searchTerm: new FormControl(searchTerm, Validators.required),
       })
     );
   }

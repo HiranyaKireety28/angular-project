@@ -62,6 +62,7 @@
               <input matInput formControlName="sellingPrice" />
             </mat-form-field>
             <mat-error *ngIf="product.get('sellingPrice')?.hasError('required') && product.get('sellingPrice')?.touched">Please enter Product Selling Price</mat-error>
+            <mat-error *ngIf="product.get('sellingPrice')?.hasError('isNotNumeric') && product.get('sellingPrice')?.touched">Please enter only digits</mat-error>
           </div>
           <div>
             <mat-form-field appearance="fill">
@@ -69,6 +70,7 @@
               <input matInput formControlName="costPrice" />
             </mat-form-field>
             <mat-error *ngIf="product.get('costPrice')?.hasError('required') && product.get('costPrice')?.touched">Please enter Product Actual Price</mat-error>
+            <mat-error *ngIf="product.get('costPrice')?.hasError('isNotNumeric') && product.get('costPrice')?.touched">Please enter only digits</mat-error>
           </div>
           <div>
             <mat-form-field appearance="fill">
@@ -76,6 +78,7 @@
               <input matInput formControlName="discount" />
             </mat-form-field>
             <mat-error *ngIf="product.get('discount')?.hasError('required') && product.get('discount')?.touched">Please enter Product Discount</mat-error>
+            <mat-error *ngIf="product.get('discount')?.hasError('isNotNumeric') && product.get('discount')?.touched">Please enter only digits</mat-error>
           </div>
           <div>
             <mat-form-field appearance="fill">
@@ -96,6 +99,13 @@
               <mat-datepicker #picker></mat-datepicker>
             </mat-form-field>
             <mat-error *ngIf="product.get('deliveryDate')?.hasError('required') && product.get('deliveryDate')?.touched">Please enter Product Delivery Date</mat-error>
+          </div>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Product Search Term</mat-label>
+              <input matInput formControlName="searchTerm"/>
+            </mat-form-field>
+            <mat-error *ngIf="product.get('searchTerm')?.hasError('required') && product.get('searchTerm')?.touched">Please enter Product Search Term</mat-error>
           </div>
         </div>
       </div>

@@ -11,8 +11,6 @@ import { AdContainer } from '../two-col-ads/ad';
 })
 export class HomeComponent implements OnInit {
 
-  selectedProduct?: Product;
-
   clickedItem!: CarouselItem;
 
   items: CarouselItem[][] = [
@@ -84,7 +82,7 @@ export class HomeComponent implements OnInit {
     ],
   ];
 
-  products?: Product[];
+
 
   carousels: Carousel[] = [
     {
@@ -257,24 +255,14 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor(private productService: ProductsService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.productService.products$.subscribe((products: Product[]) => {
-      this.products = products;
-      console.log('products', products);
-    });
+
   }
 
   showDetails(item: CarouselItem) {
     this.clickedItem = item;
   }
 
-  showProductDetails(product: Product): void {
-    this.selectedProduct = product;
-  }
-
-  trackByProduct(index: number, product: Product) {
-    return product.id;
-  }
 }

@@ -24,18 +24,6 @@
     <app-details [item]="clickedItem"></app-details>
   </mat-card>
 </div>
-<div class="product-container">
-  <div class="product-list-container">
-    <app-product
-      *ngFor="let product of products; trackBy: trackByProduct"
-      [product]="product"
-      (productClicked)="showProductDetails($event)"
-    ></app-product>
-  </div>
-  <div class="product-details-container">
-    <app-product-details [product]="selectedProduct"></app-product-details>
-  </div>
-</div>
 <!--To add a advertisement container-->
 <div>
   <!-- <app-add-ad-container></app-add-ad-container> -->

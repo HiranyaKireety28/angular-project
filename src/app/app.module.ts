@@ -32,6 +32,7 @@ import { BestsellersComponent } from './bestsellers/bestsellers.component';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { CustomerServiceComponent } from './customer-service/customer-service.component';
 import { HomeComponent } from './home/home.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { HomeComponent } from './home/home.component';
     MobilesComponent,
     CustomerServiceComponent,
     HomeComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,

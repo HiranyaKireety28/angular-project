@@ -1,6 +1,7 @@
 export interface Product {
   id: number;
   imageSource: string;
+  searchTerm: string;
   title: string;
   rating: number;
   reviewCount: number;
